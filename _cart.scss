@@ -1,0 +1,287 @@
+$color-form: #f7f6f6;
+
+@keyframes myAnim {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes myAnim2 {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateX(10px);
+  }
+
+  80% {
+    transform: translateX(8px);
+  }
+
+  90% {
+    transform: translateX(-8px);
+  }
+}
+
+.top__cart {
+  height: 400px;
+  background-image: url(./img/cart/topback-cart.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cart {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 32px;
+  margin-top: 64px;
+  &__name_box {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    margin-right: 28px;
+  }
+
+  &__name_box_text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+  }
+
+  &__item {
+    border-top: 0.5px solid #cacdd8;
+    padding-top: 25px;
+    padding-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__item:nth-of-type(3) {
+    padding-top: 32px;
+  }
+
+  &__left {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__left_img {
+    height: 173px;
+  }
+
+  &__info {
+    width: 276px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__product_name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    text-decoration: none;
+  }
+
+  &__product_desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #888888;
+  }
+
+  &__product_price {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #050505;
+  }
+
+  &__link_box {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__link_box_link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 210%;
+    text-decoration-line: none;
+    color: #000000;
+  }
+
+  &__link_box_link:hover {
+    text-decoration-line: underline;
+  }
+
+  &__item_input {
+    font-family: "Montserrat";
+    height: 51px;
+    width: 71px;
+    background: $color-form;
+    border-radius: 6px;
+    border: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 210%;
+    color: #000000;
+    text-align: center;
+    padding-right: 16px;
+    padding-left: 16px;
+    box-sizing: border-box;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 379px;
+    height: 556px;
+    background: $color-form;
+    border-radius: 20px;
+    height: 556px;
+    grid-column: span 4;
+  }
+
+  &__form_title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+    margin-top: 42px;
+    margin-bottom: 35px;
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+  }
+
+  &__input_action {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    background: $color-form;
+    width: 288px;
+    border: none;
+    border-bottom: 1px solid #cacdd8;
+    padding-bottom: 3px;
+    &::placeholder {
+      color: #000000;
+    }
+  }
+
+  &__form_total_box {
+    margin-top: 64px;
+    margin-bottom: 18px;
+  }
+
+  &__form_total {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+  }
+
+  &__form_total_amount {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+  }
+
+  &__form_link {
+    font-family: "Montserrat";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 290px;
+    height: 41px;
+    background: $color-form;
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    border: 1px solid #000000;
+    transition: all 0.3s;
+    animation: myAnim2 2s ease 2s 2 normal forwards;
+    &:hover {
+      animation: myAnim 1s ease 0s 1 normal none;
+      background: #000000;
+      color: #ffffff;
+    }
+  }
+
+  &__content {
+    grid-column: span 8;
+  }
+
+  &__choosing {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 7px;
+    margin-top: 18px;
+  }
+
+  &__choosing_links {
+    font-family: "Montserrat";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 37px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    text-decoration: none;
+    background-color: white;
+    transition: all 0.3s;
+    &:hover {
+      background: #000000;
+      color: #ffffff;
+    }
+  }
+}
